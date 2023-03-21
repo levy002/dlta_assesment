@@ -2,6 +2,10 @@ const CountryInfo = require('../models/CountryInfo');
 
 module.exports = {
   Query: {
+    async getAllCountryInfo(_, {}) {
+      return await CountryInfo.find();
+    },
+
     async countryInfo(_, { ID }) {
       return await CountryInfo.findById(ID);
     },

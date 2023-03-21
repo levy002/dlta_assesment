@@ -9,6 +9,7 @@ module.exports = gql`
   }
 
   type Query {
+    getAllCountryInfo: [countryInfo]
     countryInfo(ID: ID!): countryInfo!
     getCountryInfoByYear(year: String): [countryInfo]
     getCountryInfoBYearRange(fromYear: String, toYear: String): [countryInfo]
